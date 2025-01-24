@@ -10,7 +10,7 @@ const VideoCall = () => {
   const socketRef = useRef();
 
   useEffect(() => {
-    socketRef.current = new WebSocket('ws://localhost:5000');
+   socketRef.current = new WebSocket('wss://meet-backend-v2kt.onrender.com');
 
     navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(stream => {
       userVideo.current.srcObject = stream;
